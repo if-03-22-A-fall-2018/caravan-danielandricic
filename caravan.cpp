@@ -47,18 +47,6 @@ int get_length(Caravan caravan)
 
 void delete_caravan(Caravan caravan)
 {
-  /*if(!caravan->_head)
-  {
-    return;
-  }
-
-  Node* currentnode = caravan->_head;
-  while(currentnode)
-  {
-    currentnode = currentnode->Next;
-    sfree(currentnode);
-  }
-  caravan->_head = NULL;*/
   int length = get_length(caravan);
 
   for(int i = 0; i < length; i++)
@@ -67,7 +55,6 @@ void delete_caravan(Caravan caravan)
     caravan->_head = head->Next;
     sfree(head);
   }
-
   sfree(caravan);
 }
 
